@@ -1,0 +1,80 @@
+\section{Ejercicio 1}
+
+Se implementó una red de Kohonen de grilla $10 \times 10$ con 2 entradas. Los pesos se inicializan aleatoriamente en $[-1,1]^2$ y se entrenan durante 10.000 iteraciones usando una función de vecindad gaussiana con radio $\sigma$ decreciente. En cada figura se muestran snapshots del mapa en distintas iteraciones: los puntos grises son las muestras de entrenamiento, los nodos rojos son los pesos de las neuronas y las líneas azules conectan neuronas vecinas en la grilla.
+
+\subsection{Círculo unitario}
+
+En la figura~\ref{fig:circulo} se puede observar cómo la grilla se despliega desde una distribución inicial desordenada hasta adaptarse a la forma circular, cubriendo el disco de manera uniforme y preservando la vecindad entre neuronas.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{img_informe/ej1/circulo_unitario}
+    \caption{Evolución del mapa entrenado sobre el círculo unitario.}
+    \label{fig:circulo}
+\end{figure}
+
+\subsection{Cuadrado}
+
+En la figura~\ref{fig:cuadrado} se puede observar que el cuadrado es la figura más compatible con la topología de una grilla rectangular: el mapa converge rápidamente sin cruces ni pliegues, cubriendo de forma uniforme toda la región.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{img_informe/ej1/cuadrado}
+    \caption{Evolución del mapa entrenado sobre el cuadrado $[-1,1]^2$.}
+    \label{fig:cuadrado}
+\end{figure}
+
+\subsection{Triángulo}
+
+En la figura~\ref{fig:triangulo} se puede observar que la red logra adaptarse a la forma triangular, aunque la incompatibilidad entre la grilla cuadrada y la geometría triangular genera cierta distorsión en las esquinas, donde algunas neuronas quedan comprimidas.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{img_informe/ej1/triangulo}
+    \caption{Evolución del mapa entrenado sobre el triángulo.}
+    \label{fig:triangulo}
+\end{figure}
+
+\subsection{Anillo}
+
+En la figura~\ref{fig:anillo} se puede observar que el anillo es topológicamente incompatible con una grilla plana: para cubrirlo, la grilla necesitaría cerrarse sobre sí misma. El resultado final muestra pliegues o cruces inevitables en algún punto del mapa.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{img_informe/ej1/anillo}
+    \caption{Evolución del mapa entrenado sobre un anillo ($r \in [0.5, 1.0]$).}
+    \label{fig:anillo}
+\end{figure}
+
+\subsection{Dos anillos concéntricos}
+
+En la figura~\ref{fig:anillo_disco} se puede observar que la distribución, al tener dos regiones separadas por una zona vacía, genera tensión topológica en el mapa: la grilla se divide entre ambas regiones y se forman pliegues en la zona de transición.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{img_informe/ej1/anillo_disco}
+    \caption{Evolución del mapa entrenado sobre dos anillos concéntricos.}
+    \label{fig:anillo_disco}
+\end{figure}
+
+\subsection{Dos clusters gaussianos}
+
+En la figura~\ref{fig:clusters} se puede observar que el mapa asigna grupos de neuronas a cada cluster, con la separación entre ambos claramente reflejada en la organización de la grilla.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{img_informe/ej1/dos_clusters}
+    \caption{Evolución del mapa entrenado sobre dos clusters gaussianos.}
+    \label{fig:clusters}
+\end{figure}
+
+\subsection{Letra M}
+
+En la figura~\ref{fig:M} se puede observar que la estructura ramificada de la letra M no puede representarse sin cruces con una grilla plana. El mapa logra adaptarse a los trazos principales, aunque aparecen pliegues en las zonas donde los segmentos se unen.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{img_informe/ej1/M}
+    \caption{Evolución del mapa entrenado sobre la figura de la letra M.}
+    \label{fig:M}
+\end{figure}

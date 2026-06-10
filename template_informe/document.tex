@@ -1,0 +1,38 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage{mystyle}
+
+\pdfsuppresswarningpagegroup=1
+
+\usepackage{graphicx}
+\graphicspath{ {./img_informe/} }
+
+\usepackage{hyperref}
+\usepackage{amssymb}
+\usepackage{subcaption}
+\usepackage[square,numbers]{natbib}
+\bibliographystyle{ieeetr}
+
+
+\usepackage{ifpdf}
+\ifpdf
+  \DeclareGraphicsExtensions{.pdf,.png}
+\else
+\fi
+
+
+\runninghead{Redes Neuronales y Aprendizaje Profundo}
+\footertext{}
+
+\begin{document}
+
+\input{./tex/title.tex}
+\tableofcontents
+\thispagestyle{empty}
+
+\clearpage
+\input{./tex/main.tex}
+
+\bibliography{bibliography.bib}
+
+\end{document}

@@ -1,0 +1,37 @@
+\section{Introducción Teórica}
+
+Una red de Kohonen recibe entradas $\bar{x} \in \mathbb{R}^n$ y las mapea a una grilla 2D de neuronas. Cada neurona $i$ tiene asociado un vector de pesos $\bar{w}_i \in \mathbb{R}^n$ del mismo tamaño que la entrada.
+
+\subsection*{Neurona ganadora (BMU)}
+
+Dado un estímulo $\bar{x}$, la neurona ganadora $i^*$ es aquella cuyos pesos son más cercanos a la entrada:
+
+\begin{equation}
+    \|\bar{w}_{i^*} - \bar{x}\| \leq \|\bar{w}_i - \bar{x}\| \quad \forall\, i
+\end{equation}
+
+\subsection*{Vecindad en la grilla}
+
+Cada neurona $i$ tiene una posición $\bar{r}_i = (r_{i_1},\, r_{i_2})$ en la grilla. La distancia entre dos neuronas $i$ e $i^*$ en la grilla se define como:
+
+\begin{equation}
+    d_{(i,\,i^*)} = \|\bar{r}_i - \bar{r}_{i^*}\|
+\end{equation}
+
+La función de vecindad gaussiana, que determina cuánto se actualiza cada neurona en función de su distancia a la ganadora, es:
+
+\begin{equation}
+    V(i,\,i^*) = e^{-\dfrac{d^2_{(i,\,i^*)}}{\sigma^2}}
+\end{equation}
+
+donde $\sigma$ es el radio de vecindad, que decrece a lo largo del entrenamiento ($\sigma \approx \sigma_0 \cdot 0{,}99^{\,t}$ en la formulación discreta).
+
+\subsection*{Actualización de pesos}
+
+En cada paso de entrenamiento se actualizan los pesos de todas las neuronas según:
+
+\begin{equation}
+    \Delta w_{ij} = \eta \left(\bar{x}(s) - w_{ij}\right) V(i,\,i^*)
+\end{equation}
+
+donde $\eta$ es la tasa de aprendizaje y $\bar{x}(s)$ es la muestra presentada en el paso $s$. Las neuronas cercanas a la ganadora (alto $V$) se actualizan más, mientras que las lejanas apenas se modifican.

@@ -1,0 +1,123 @@
+\section{Desarrollo}
+
+\subsection{Ejercicio 1: Preservación de Topología con Redes de Kohonen}
+
+\subsubsection{Implementación}
+
+Se implementó una red de Kohonen desde cero en Python. La clase \texttt{KohonenSOM} recibe como parámetros el tamaño de la grilla ($N_r \times N_c$), la dimensión de entrada, la tasa de aprendizaje $\eta$ y los valores inicial y final del radio de vecindad $\sigma$.
+
+Los pesos se inicializan aleatoriamente con distribución uniforme en $[-1, 1]^2$. El entrenamiento sigue el algoritmo descripto en la sección anterior:
+
+\begin{enumerate}
+    \item Se samplea un punto $\mathbf{x}$ de la distribución objetivo.
+    \item Se calcula la BMU como $i^* = \arg\min_i \|\mathbf{x} - \mathbf{w}_i\|$.
+    \item Se actualiza la función de vecindad gaussiana centrada en $i^*$.
+    \item Se actualizan los pesos: $\mathbf{w}_i \mathrel{+}= \eta \cdot h(i, i^*) \cdot (\mathbf{x} - \mathbf{w}_i)$.
+\end{enumerate}
+
+El radio de vecindad decae exponencialmente a lo largo de las iteraciones, desde $\sigma_0 = \max(N_r, N_c)/2$ hasta $\sigma_f = 0.5$. La tasa de aprendizaje $\eta = 0.1$ se mantiene constante.
+
+Para visualizar la evolución del mapa, se toman \textit{snapshots} de los pesos cada cierto número de iteraciones. En cada snapshot se grafica la grilla de pesos (neurona a neurona, conectando vecinos en la grilla) superpuesta a los puntos de entrenamiento.
+
+Todos los experimentos se realizaron con una grilla de $10 \times 10$ neuronas y $10.000$ iteraciones de entrenamiento.
+
+\subsubsection{Resultados}
+
+Se entrenó la red con distribuciones uniformes sobre distintas figuras geométricas. En todos los casos se muestra la evolución del mapa en $t = 0$, $t = 2000$, $t = 4000$, $t = 6000$, $t = 8000$ y $t = 9999$.
+
+\paragraph{Círculo unitario.}
+
+Los puntos se muestrean uniformemente dentro del círculo de radio 1. Para evitar el sesgo de muestrear en coordenadas polares, el radio se obtiene como $r = \sqrt{u}$ con $u \sim \mathcal{U}(0,1)$.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{img_informe/ej1/circulo_unitario}
+    \caption{Evolución del mapa de Kohonen entrenado sobre el círculo unitario.}
+    \label{fig:ej1_circulo}
+\end{figure}
+
+Se observa cómo la grilla, inicialmente distribuida aleatoriamente, se despliega y adapta progresivamente para cubrir el disco. Al finalizar el entrenamiento la red preserva la topología: neuronas adyacentes en la grilla corresponden a zonas contiguas del espacio de entrada.
+
+\paragraph{Cuadrado.}
+
+Los puntos se muestrean uniformemente en $[-1, 1]^2$.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{img_informe/ej1/cuadrado}
+    \caption{Evolución del mapa de Kohonen entrenado sobre el cuadrado $[-1,1]^2$.}
+    \label{fig:ej1_cuadrado}
+\end{figure}
+
+El cuadrado es la figura que mejor se adapta a la topología intrínseca de una grilla 2D rectangular. El mapa converge rápidamente a una distribución uniforme que cubre toda la región.
+
+\paragraph{Triángulo.}
+
+Los puntos se muestrean uniformemente dentro de un triángulo equilátero mediante la transformación $\mathbf{x} = \mathbf{v}_0 + r_1(\mathbf{v}_1 - \mathbf{v}_0) + r_2(\mathbf{v}_2 - \mathbf{v}_0)$, con $r_1, r_2 \sim \mathcal{U}(0,1)$ y $r_1 + r_2 \leq 1$.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{img_informe/ej1/triangulo}
+    \caption{Evolución del mapa de Kohonen entrenado sobre el triángulo.}
+    \label{fig:ej1_triangulo}
+\end{figure}
+
+El mapa logra adaptarse a la geometría triangular, aunque la discontinuidad entre la topología de la grilla cuadrada y la forma triangular genera cierta distorsión en las esquinas.
+
+\paragraph{Anillo.}
+
+Los puntos se muestrean en una corona circular con $r \in [0.5, 1.0]$, usando $r = \sqrt{u(r_{\max}^2 - r_{\min}^2) + r_{\min}^2}$ para garantizar uniformidad en área.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{img_informe/ej1/anillo}
+    \caption{Evolución del mapa de Kohonen entrenado sobre un anillo.}
+    \label{fig:ej1_anillo}
+\end{figure}
+
+Este caso es topológicamente más interesante: la grilla cuadrada tiene que ``enrollarse'' para adaptarse a la distribución anular. El resultado final muestra que el mapa logra cubrir el anillo razonablemente bien, aunque se presentan pliegues o cruces dado que la topología de un anillo (cilíndrica) es incompatible con la de una grilla plana.
+
+\paragraph{Dos anillos concéntricos.}
+
+Se samplea con igual probabilidad de un anillo interno ($r \in [0, 0.4]$) o de un anillo externo ($r \in [0.6, 1.0]$), dejando una zona sin puntos entre ambos.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{img_informe/ej1/anillo_disco}
+    \caption{Evolución del mapa de Kohonen entrenado sobre dos anillos concéntricos.}
+    \label{fig:ej1_anillo_disco}
+\end{figure}
+
+La distribución bimodal con una región vacía intermedia resulta particularmente difícil para el mapa: la grilla debe dividirse entre ambas regiones sin poder cubrir la zona vacía, lo que genera tensión topológica visible en la organización final.
+
+\paragraph{Dos clusters gaussianos.}
+
+Se samplea con igual probabilidad de dos distribuciones gaussianas centradas en $(-0.5, 0)$ y $(0.5, 0)$ con desviación estándar $\sigma = 0.15$.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{img_informe/ej1/dos_clusters}
+    \caption{Evolución del mapa de Kohonen entrenado sobre dos clusters gaussianos.}
+    \label{fig:ej1_clusters}
+\end{figure}
+
+El mapa se organiza asignando neuronas a cada cluster. La separación entre ambos grupos queda reflejada en la topología del mapa entrenado.
+
+\paragraph{Letra M.}
+
+Los puntos se muestrean sobre los segmentos que componen la letra ``M'', con probabilidad proporcional a la longitud de cada segmento, y con perturbación gaussiana transversal para dar cierto espesor.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{img_informe/ej1/M}
+    \caption{Evolución del mapa de Kohonen entrenado sobre la figura de la letra M.}
+    \label{fig:ej1_M}
+\end{figure}
+
+La estructura ramificada de la letra M es topológicamente incompatible con una grilla 2D plana. El mapa logra adaptarse parcialmente a la forma, aunque inevitablemente aparecen pliegues en las zonas de unión de los trazos.
+
+\subsubsection{Análisis}
+
+Los experimentos evidencian la capacidad de las redes de Kohonen para aprender la distribución subyacente de los datos y preservar su topología. En figuras simplemente conexas y compatibles con la topología de la grilla (círculo, cuadrado, triángulo), el mapa converge a una distribución uniforme y sin cruces. En cambio, en figuras topológicamente incompatibles (anillo, dos anillos, letra M), el mapa debe ``comprometer'' su organización, generando pliegues o cruces inevitables.
+
+El parámetro $\sigma$ juega un rol fundamental: durante las primeras iteraciones, un $\sigma$ grande garantiza la organización global del mapa; a medida que $\sigma$ decrece, el mapa se afina localmente para ajustarse a los detalles de la distribución.
