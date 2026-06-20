@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.6.3)  10 JUN 2026 18:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.6.3)  20 JUN 2026 13:41
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -576,7 +576,7 @@ Package hyperref Info: Link coloring OFF on input line 27.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
  (./tex/title.tex
-<img_informe/fiuba_logo_nuevo.png, id=40, 367.1316pt x 140.6856pt>
+<img_informe/fiuba_logo_nuevo.png, id=60, 367.1316pt x 140.6856pt>
 File: img_informe/fiuba_logo_nuevo.png Graphic file (type png)
 <use img_informe/fiuba_logo_nuevo.png>
 Package pdftex.def Info: img_informe/fiuba_logo_nuevo.png  used on input line 4
@@ -606,13 +606,13 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./img_informe/fiuba_logo
 _nuevo.png (PNG copy)>] (./tex/main.tex (./tex/intro_teorica.tex)
 (./tex/desarrollo.tex
-<img_informe/ej1/circulo_unitario.png, id=63, 1726.5303pt x 300.6432pt>
+<img_informe/ej1/circulo_unitario.png, id=89, 1726.5303pt x 300.6432pt>
 File: img_informe/ej1/circulo_unitario.png Graphic file (type png)
 <use img_informe/ej1/circulo_unitario.png>
 Package pdftex.def Info: img_informe/ej1/circulo_unitario.png  used on input li
 ne 11.
 (pdftex.def)             Requested size: 483.69687pt x 84.22539pt.
-<img_informe/ej1/cuadrado.png, id=66, 1726.5303pt x 299.1978pt>
+<img_informe/ej1/cuadrado.png, id=92, 1726.5303pt x 299.1978pt>
 File: img_informe/ej1/cuadrado.png Graphic file (type png)
 <use img_informe/ej1/cuadrado.png>
 Package pdftex.def Info: img_informe/ej1/cuadrado.png  used on input line 22.
@@ -622,23 +622,23 @@ Package pdftex.def Info: img_informe/ej1/cuadrado.png  used on input line 22.
 [2
 
  <./img_informe/ej1/circulo_unitario.png>]
-<img_informe/ej1/triangulo.png, id=91, 1722.9168pt x 299.1978pt>
+<img_informe/ej1/triangulo.png, id=116, 1722.9168pt x 299.1978pt>
 File: img_informe/ej1/triangulo.png Graphic file (type png)
 <use img_informe/ej1/triangulo.png>
 Package pdftex.def Info: img_informe/ej1/triangulo.png  used on input line 33.
 (pdftex.def)             Requested size: 483.69687pt x 83.99394pt.
-<img_informe/ej1/anillo.png, id=93, 1715.6898pt x 296.307pt>
+<img_informe/ej1/anillo.png, id=118, 1715.6898pt x 296.307pt>
 File: img_informe/ej1/anillo.png Graphic file (type png)
 <use img_informe/ej1/anillo.png>
 Package pdftex.def Info: img_informe/ej1/anillo.png  used on input line 44.
 (pdftex.def)             Requested size: 483.69687pt x 83.53506pt.
-<img_informe/ej1/anillo_disco.png, id=95, 1725.0849pt x 300.6432pt>
+<img_informe/ej1/anillo_disco.png, id=120, 1725.0849pt x 300.6432pt>
 File: img_informe/ej1/anillo_disco.png Graphic file (type png)
 <use img_informe/ej1/anillo_disco.png>
 Package pdftex.def Info: img_informe/ej1/anillo_disco.png  used on input line 5
 5.
 (pdftex.def)             Requested size: 483.69687pt x 84.2942pt.
-<img_informe/ej1/dos_clusters.png, id=97, 1726.5303pt x 298.4751pt>
+<img_informe/ej1/dos_clusters.png, id=122, 1726.5303pt x 298.4751pt>
 File: img_informe/ej1/dos_clusters.png Graphic file (type png)
 <use img_informe/ej1/dos_clusters.png>
 Package pdftex.def Info: img_informe/ej1/dos_clusters.png  used on input line 6
@@ -648,20 +648,91 @@ Package pdftex.def Info: img_informe/ej1/dos_clusters.png  used on input line 6
 
 [3 <./img_informe/ej1/cuadrado.png> <./img_informe/ej1/triangulo.png> <./img_in
 forme/ej1/anillo.png>]
-<img_informe/ej1/M.png, id=111, 1726.5303pt x 301.3659pt>
+<img_informe/ej1/M.png, id=136, 1726.5303pt x 301.3659pt>
 File: img_informe/ej1/M.png Graphic file (type png)
 <use img_informe/ej1/M.png>
 Package pdftex.def Info: img_informe/ej1/M.png  used on input line 77.
 (pdftex.def)             Requested size: 483.69687pt x 84.42786pt.
-) (./tex/conclusiones.tex) (./tex/appendix.tex))
-(./document.bbl
 
-Package natbib Warning: Empty `thebibliography' environment on input line 3.
 
-)
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 101.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 101.
+
+
 
 [4 <./img_informe/ej1/anillo_disco.png> <./img_informe/ej1/dos_clusters.png> <.
-/img_informe/ej1/M.png>] (./document.aux
+/img_informe/ej1/M.png>]
+<img_informe/ej2/evolucion_1.png, id=149, 1438.173pt x 281.853pt>
+File: img_informe/ej2/evolucion_1.png Graphic file (type png)
+<use img_informe/ej2/evolucion_1.png>
+Package pdftex.def Info: img_informe/ej2/evolucion_1.png  used on input line 10
+9.
+(pdftex.def)             Requested size: 483.69687pt x 94.79227pt.
+<img_informe/ej2/camino_1.png, id=150, 488.5452pt x 492.8814pt>
+File: img_informe/ej2/camino_1.png Graphic file (type png)
+<use img_informe/ej2/camino_1.png>
+Package pdftex.def Info: img_informe/ej2/camino_1.png  used on input line 116.
+(pdftex.def)             Requested size: 290.22107pt x 292.79802pt.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 121.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 121.
+
+<img_informe/ej2/evolucion_2.png, id=153, 1438.173pt x 281.853pt>
+File: img_informe/ej2/evolucion_2.png Graphic file (type png)
+<use img_informe/ej2/evolucion_2.png>
+Package pdftex.def Info: img_informe/ej2/evolucion_2.png  used on input line 12
+9.
+(pdftex.def)             Requested size: 483.69687pt x 94.79227pt.
+<img_informe/ej2/camino_2.png, id=154, 488.5452pt x 492.8814pt>
+File: img_informe/ej2/camino_2.png Graphic file (type png)
+<use img_informe/ej2/camino_2.png>
+Package pdftex.def Info: img_informe/ej2/camino_2.png  used on input line 136.
+(pdftex.def)             Requested size: 290.22107pt x 292.79802pt.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 141.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 141.
+
+
+
+[5 <./img_informe/ej2/evolucion_1.png> <./img_informe/ej2/camino_1.png>]
+
+[6 <./img_informe/ej2/evolucion_2.png> <./img_informe/ej2/camino_2.png>]
+<img_informe/ej2/evolucion_3.png, id=176, 1438.173pt x 281.853pt>
+File: img_informe/ej2/evolucion_3.png Graphic file (type png)
+<use img_informe/ej2/evolucion_3.png>
+Package pdftex.def Info: img_informe/ej2/evolucion_3.png  used on input line 14
+7.
+(pdftex.def)             Requested size: 483.69687pt x 94.79227pt.
+<img_informe/ej2/camino_3.png, id=177, 488.5452pt x 492.8814pt>
+File: img_informe/ej2/camino_3.png Graphic file (type png)
+<use img_informe/ej2/camino_3.png>
+Package pdftex.def Info: img_informe/ej2/camino_3.png  used on input line 154.
+(pdftex.def)             Requested size: 290.22107pt x 292.79802pt.
+
+
+[7 <./img_informe/ej2/evolucion_3.png> <./img_informe/ej2/camino_3.png>]
+<img_informe/ej3/matriz_U.png, id=188, 406.8801pt x 361.35pt>
+File: img_informe/ej3/matriz_U.png Graphic file (type png)
+<use img_informe/ej3/matriz_U.png>
+Package pdftex.def Info: img_informe/ej3/matriz_U.png  used on input line 175.
+(pdftex.def)             Requested size: 290.22107pt x 257.74576pt.
+)
+(./tex/conclusiones.tex))
+
+[8 <./img_informe/ej3/matriz_U.png>] (./document.aux
 LaTeX Info: Redefining \. on input line 12.
 LaTeX Info: Redefining \% on input line 12.
 )
@@ -669,35 +740,44 @@ LaTeX Info: Redefining \% on input line 12.
 LaTeX2e <2025-06-01>
 L3 programming layer <2025-05-26>
  ***********
-Package rerunfilecheck Info: File `document.out' has not changed.
-(rerunfilecheck)             Checksum: 02B42B69F2A135C24E8156136AE3667D;1144.
+
+
+Package rerunfilecheck Warning: File `document.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `document.out':
+(rerunfilecheck)             Before: CE3F5CB1B99A1CE004077C58DCF87093;2288
+(rerunfilecheck)             After:  43F7B82AB5E7A5ACD38E12B6027AF705;2385.
  ) 
 Here is how much of TeX's memory you used:
- 17968 strings out of 467892
- 345628 string characters out of 5438323
- 737537 words of memory out of 5000000
- 46289 multiletter control sequences out of 15000+600000
- 632541 words of font info for 61 fonts, out of 8000000 for 9000
+ 18062 strings out of 467892
+ 347825 string characters out of 5438323
+ 738111 words of memory out of 5000000
+ 46363 multiletter control sequences out of 15000+600000
+ 636935 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 88i,12n,97p,559b,1082s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 88i,12n,97p,637b,1082s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/tex
 live/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2025
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><c:/texlive/2025/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/2025/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmmi7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5
-.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/te
-xlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/202
-5/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2025/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2025/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmti9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/publi
-c/amsfonts/symbols/msbm10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm
--super/sfbx2074.pfb>
-Output written on document.pdf (4 pages, 2900409 bytes).
+lic/amsfonts/cm/cmmi12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmmi7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:
+/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/20
+25/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2025/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2025/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmsy7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmti10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti
+9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pf
+b><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb>
+Output written on document.pdf (8 pages, 3370852 bytes).
 PDF statistics:
- 193 PDF objects out of 1000 (max. 8388607)
- 140 compressed objects within 2 object streams
- 30 named destinations out of 1000 (max. 500000)
- 113 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 286 PDF objects out of 1000 (max. 8388607)
+ 208 compressed objects within 3 object streams
+ 47 named destinations out of 1000 (max. 500000)
+ 188 words of extra memory for PDF output out of 10000 (max. 10000000)
 

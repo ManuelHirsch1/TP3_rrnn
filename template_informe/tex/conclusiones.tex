@@ -1,0 +1,9 @@
+\section{Conclusión}
+
+A lo largo del trabajo se exploraron tres aplicaciones de las redes de Kohonen, evidenciando su versatilidad como herramienta de aprendizaje no supervisado.
+
+En el primer ejercicio se comprobó la capacidad de la red para aprender distribuciones arbitrarias en $\mathbb{R}^2$ y preservar su topología. En figuras compatibles con la grilla (cuadrado, círculo, triángulo) el mapa converge sin distorsiones, mientras que en figuras topológicamente incompatibles (anillo, letra M) aparecen pliegues inevitables, lo cual es una consecuencia directa de la incompatibilidad entre la topología de la grilla y la del espacio de entrada.
+
+En el segundo ejercicio se utilizó la red para aproximar el TSP. Se observó que el factor $M/N$ es determinante: con $M/N = 1$ la resolución es insuficiente, mientras que con $M/N = 2$ la red ya logra un recorrido de calidad aceptable. Aumentar el factor a $M/N = 3$ ofrece una mejora marginal a costa de mayor longitud de camino, por lo que $M/N = 2$ resulta el mejor balance entre calidad y costo.
+
+Finalmente, en el tercer ejercicio se utilizó la SOM para reducir la dimensionalidad de datos de 100 dimensiones a una representación 2D, y mediante la matriz U se identificaron 5 clusters en los datos. Esto ilustra cómo la red actúa simultáneamente como reductor de dimensionalidad y como herramienta de análisis exploratorio.
